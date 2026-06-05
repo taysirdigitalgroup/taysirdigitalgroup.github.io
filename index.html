@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taysir Digital Group | Marketing Digital & Services Informatiques</title>
+    <style>
+        :root {
+            --bg-dark: #0a0f1d;
+            --card-bg: rgba(25, 32, 52, 0.6);
+            --cyan-neon: #00f2fe;
+            --purple-neon: #4facfe;
+            --text-main: #ffffff;
+            --text-muted: #8fa0dd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Effet de halo lumineux en arrière-plan */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(79, 172, 254, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--cyan-neon), var(--purple-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 2rem;
+            z-index: 1;
+        }
+
+        .premium-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            padding: 3.5rem 2.5rem;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.5);
+        }
+
+        .badge {
+            background: rgba(0, 242, 254, 0.1);
+            border: 1px solid var(--cyan-neon);
+            color: var(--cyan-neon);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.4), transparent);
+            margin: 2rem 0;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            text-align: left;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .service-item::before {
+            content: '⚡';
+            margin-right: 10px;
+            color: var(--cyan-neon);
+        }
+
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1;
+        }
+
+        @media (max-width: 580px) {
+            h1 { font-size: 1.8rem; }
+            .services-list { grid-template-columns: 1fr; gap: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Taysir Digital Group</div>
+    </header>
+
+    <main>
+        <div class="premium-card">
+            <span class="badge">Marketing Digital & Services Informatiques</span>
+            <h1>Propulsez votre visibilité et votre infrastructure technique</h1>
+            <p class="tagline">Solutions IT sur mesure, ingénierie logicielle et stratégies marketing de haute performance pour accélérer la croissance de votre entreprise.</p>
+            
+            <div class="divider"></div>
+            
+            <div class="services-list">
+                <div class="service-item">Développement Web & Mobile</div>
+                <div class="service-item">Stratégie Marketing & Visibilité</div>
+                <div class="service-item">Administration Systèmes & Réseaux</div>
+                <div class="service-item">Optimisation SEO & Acquisition</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Taysir Digital Group. Tous droits réservés.
+    </footer>
+
+</body>
+</html>
