@@ -279,23 +279,6 @@ La page **Console** fonctionne avec ou sans Termux :
 
 ---
 
-## Réactiver AdMob (après publication store)
-
-**`lib/main.dart`** — décommenter :
-```dart
-await MobileAds.instance.initialize();
-```
-
-**`lib/pages/dashboard_page.dart`** — remplacer les blocs Start.io par les blocs AdMob commentés.
-
-**`android/app/src/main/AndroidManifest.xml`** — remplacer les IDs de test :
-```xml
-<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
-    android:value="ca-app-pub-XXXXXXXXXXXXXXXX~NNNNNNNNNN"/>
-```
-
----
-
 ## Contacts & Support
 
 | | |
