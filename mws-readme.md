@@ -6,7 +6,7 @@ title: Documentation - Mini Web Server Pro
 ### by [Taysir Digital Group (TDG)](https://taysirdigitalgroup.github.io) · Aliou Mbengue, PDG/CEO
 
 <p align="center">
-  <img src="assets/logo.png" width="96" alt="Mini Web Server icon"/>
+  <img src="assets//logo/logo.png" width="96" alt="Mini Web Server icon"/>
 </p>
 
 <p align="center">
