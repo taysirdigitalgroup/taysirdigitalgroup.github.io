@@ -146,3 +146,5 @@ smartadserver.com, 5791, RESELLER, 060d053dcf45cbf3
 sharethrough.com, 5791, RESELLER, d53b998a7bd4ecd2
 adorphic.com, 4051, RESELLER
 triplelift.com, 13567, RESELLER, 6c33edb13117fd86
+zetaglobal.net, 748, reseller
+themediagrid.com, godnc4, reseller, 9fac4a4a87c2a44f
