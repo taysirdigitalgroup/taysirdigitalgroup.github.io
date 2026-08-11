@@ -250,6 +250,12 @@ section { position: relative; z-index: 1; }
   padding: 56px;
   position: relative; overflow: hidden;
 }
+/* Empêche les enfants de grille de forcer la colonne à s'élargir au-delà
+   de l'espace disponible à cause du contenu qu'ils contiennent (ici, la
+   galerie de captures en défilement horizontal) — sans ça, min-width:auto
+   par défaut sur les grid items casse le overflow-x:auto de .app-gallery
+   et pousse toute la carte hors de l'écran au lieu de scroller. */
+.apps-featured > div { min-width: 0; }
 .apps-featured::before {
   content: '';
   position: absolute; top: -80px; right: -80px;
@@ -324,10 +330,12 @@ section { position: relative; z-index: 1; }
 /* Galerie de captures d'écran */
 .app-gallery {
   display: flex; gap: 16px; overflow-x: auto;
+  width: 100%; max-width: 100%;
   margin: 32px 0 -8px;
   padding-bottom: 16px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 .app-gallery::-webkit-scrollbar { height: 6px; }
 .app-gallery::-webkit-scrollbar-track { background: transparent; }
