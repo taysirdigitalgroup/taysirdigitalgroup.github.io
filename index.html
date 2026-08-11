@@ -309,6 +309,43 @@ section { position: relative; z-index: 1; }
 .step-content h5 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
 .step-content p { font-size: 13px; color: rgba(245,243,238,0.5); line-height: 1.65; }
 
+/* Deuxième app card (empilée sous la première) */
+.apps-featured + .apps-featured { margin-top: 32px; }
+
+.app-title-row { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.app-icon-mini {
+  width: 48px; height: 48px; border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border-dim);
+  flex-shrink: 0;
+}
+.app-title-row .app-title { margin-bottom: 0; }
+
+/* Galerie de captures d'écran */
+.app-gallery {
+  display: flex; gap: 16px; overflow-x: auto;
+  margin: 32px 0 -8px;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.app-gallery::-webkit-scrollbar { height: 6px; }
+.app-gallery::-webkit-scrollbar-track { background: transparent; }
+.app-gallery::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.app-gallery img {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 150px;
+  border-radius: 14px;
+  border: 1px solid var(--border-dim);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  transition: transform .2s;
+}
+.app-gallery img:hover { transform: translateY(-4px); }
+@media (max-width: 600px) {
+  .app-gallery img { width: 120px; }
+}
+
 /* ── PROJETS ── */
 #projects { background: var(--ink-2); }
 .projects-grid {
@@ -659,6 +696,75 @@ footer {
             <p>Consultez notre documentation pour obtenir des informations et instructions détaillées l'application <a href="mws-readme.html" style="text-decoration:underline;cursor:pointer; color:var(--brand);">ici</a> .</p>
           </div>
       </div>
+      </div>
+    </div>
+
+    <!-- DURUS 2.0 -->
+    <div class="apps-featured reveal">
+      <div>
+        <div class="app-badge"><i class="fab fa-android"></i> Android APK · Bibliothèque religieuse</div>
+        <div class="app-title-row">
+          <img src="assets/durus-screenshots/durus2-cap-01.jpeg" alt="Icône Durus 2.0" class="app-icon-mini">
+          <h3 class="app-title">Durus 2.0</h3>
+        </div>
+        <p class="app-version">Version 1.0.0 · APK universel · Flutter</p>
+        <p class="app-desc">
+          Bibliothèque mobile du Coran et des livres de Cheikh Ahmadou Bamba Khadimou Rassoul. Lecture fluide avec sens RTL/LTR automatique selon la langue de chaque livre, collections personnalisées, marque-page et consultation 100% hors-ligne après téléchargement.
+        </p>
+        <div class="app-tags">
+          <span class="app-tag"><i class="fas fa-check-circle" style="color:var(--brand);margin-right:5px"></i>Coran & Qasà-id</span>
+          <span class="app-tag"><i class="fas fa-check-circle" style="color:var(--brand);margin-right:5px"></i>RTL/LTR automatique</span>
+          <span class="app-tag"><i class="fas fa-check-circle" style="color:var(--brand);margin-right:5px"></i>Lecture hors-ligne</span>
+          <span class="app-tag"><i class="fas fa-check-circle" style="color:var(--brand);margin-right:5px"></i>Collections & marque-page</span>
+          <span class="app-tag"><i class="fas fa-check-circle" style="color:var(--brand);margin-right:5px"></i>Recherche instantanée</span>
+          <span class="app-tag"><i class="fas fa-check-circle" style="color:var(--brand);margin-right:5px"></i>Arabe · Français · Wolof · Anglais</span>
+        </div>
+        <a href="https://github.com/taysirdigitalgroup/xassidati-datas/releases/download/v1.0.0/durus2-v1.0.0-release.apk" class="download-btn">
+          <i class="fas fa-cloud-download-alt" style="font-size:20px"></i>
+          Télécharger l'APK
+        </a>
+        <p class="app-filesize">57.3 MB Signé par TDG</p>
+
+        <div class="app-gallery">
+          <img src="assets/durus-screenshots/durus2-cap-02.jpeg" alt="Durus 2.0 — catalogue des groupes de livres" loading="lazy">
+          <img src="assets/durus-screenshots/durus2-cap-03.jpeg" alt="Durus 2.0 — liste des livres du Coran" loading="lazy">
+          <img src="assets/durus-screenshots/durus2-cap-04.jpeg" alt="Durus 2.0 — page du Coran (rivayat Warsh)" loading="lazy">
+          <img src="assets/durus-screenshots/durus2-cap-05.jpeg" alt="Durus 2.0 — liste des Qasà-id" loading="lazy">
+          <img src="assets/durus-screenshots/durus2-cap-06.jpeg" alt="Durus 2.0 — lecture RTL d'un Qasida" loading="lazy">
+          <img src="assets/durus-screenshots/durus2-cap-07.jpeg" alt="Durus 2.0 — mes collections" loading="lazy">
+          <img src="assets/durus-screenshots/durus2-cap-08.jpeg" alt="Durus 2.0 — lecteur avec navigation de pages" loading="lazy">
+        </div>
+      </div>
+      <div class="install-guide">
+        <h4><i class="fas fa-shield-alt"></i> Guide d'installation</h4>
+        <div class="install-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h5>Télécharger l'APK</h5>
+            <p>Cliquez sur le bouton de téléchargement ci-contre.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h5>Autoriser les sources inconnues</h5>
+            <p>Si une alerte apparaît : <strong>Paramètres → Sécurité → Autoriser l'installation depuis cette source</strong>.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h5>Installer & lancer</h5>
+            <p>Ouvrez le fichier téléchargé, cliquez sur <strong>Installer</strong>, puis choisissez un livre à lire.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h5>Télécharger pour lire hors-ligne</h5>
+            <p>Depuis la bibliothèque, ajoutez un livre à une collection pour le rendre disponible sans connexion.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
